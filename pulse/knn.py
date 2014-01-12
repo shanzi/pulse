@@ -9,8 +9,8 @@ import numpy as np
 def reduce_dim(labels, samples):
     return lda(np.array(samples), np.array(labels), 2)
 
-def train_kNN(data_set, partitioner):
-    clf = kNN()
+def cv_kNN(data_set, partitioner):
+    clf = kNN(12)
     clf.set_postproc(None)
     cv = CrossValidation(clf, partitioner)
     cv_results = cv(data_set)
