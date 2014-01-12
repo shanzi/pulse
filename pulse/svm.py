@@ -13,3 +13,7 @@ def cv_SVM(data_set, partitioner):
     cv_results = cv(data_set)
     return np.mean(cv_results)
 
+def train_SVM(data_set):
+    clf = RbfCSVMC(0.8)
+    clf.train(data_set)
+    return clf

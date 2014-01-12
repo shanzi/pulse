@@ -16,3 +16,7 @@ def cv_kNN(data_set, partitioner):
     cv_results = cv(data_set)
     return np.mean(cv_results)
 
+def train_kNN(data_set):
+    clf = kNN(12)
+    clf.train(data_set)
+    return clf
